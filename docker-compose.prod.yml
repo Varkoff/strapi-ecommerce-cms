@@ -36,7 +36,7 @@ services:
       - ./package.json:/opt/package.json
       - ./package-lock.json:/opt/package-lock.json
       - ./.env:/opt/app/.env
-      - ./public:/opt/app/public
+      - /home/virgile/deployments/strapi-ecommerce-public:/opt/app/public
     ports:
       - "3071:1337"
     networks:
