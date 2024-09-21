@@ -73,7 +73,7 @@ jobs:
           touch .env
           echo "STRAPI_URL=${{ secrets.STRAPI_URL}}" >> .env
           echo "DATABASE_CLIENT=${{ secrets.DATABASE_CLIENT}} >> .env
-          echo "DATABASE_HOST=strapiDB
+          echo "DATABASE_HOST=strapiDB" >> .env
           echo "DATABASE_PORT=${{ secrets.DATABASE_PORT}} >> .env
           echo "DATABASE_NAME=${{ secrets.DATABASE_NAME}} >> .env
           echo "DATABASE_USERNAME=${{ secrets.DATABASE_USERNAME}} >> .env
