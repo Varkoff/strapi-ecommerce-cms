@@ -6,7 +6,7 @@ import { type Core, factories } from "@strapi/strapi";
 import type { ExtendableContext } from "koa";
 import Stripe from "stripe";
 import { z } from "zod";
-// import { io } from "../../..";
+import { io } from "../../..";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
     apiVersion: "2024-06-20",
@@ -343,11 +343,7 @@ const createStripeCheckout = async ({
         },
     });
 
-    // setTimeout(() => {
-
-    // }, 2000);
-    console.log(session.url);
-    // io.to(existingOrder.user.id).emit("checkout", session.url);
+    io.to(existingOrder.user.id).emit("checkout", session.url);
     await strapi.plugins.email.services.email.send({
         to: existingOrder.user.email,
         from: "Strapi Ecommerce <no-reply@strapi.algomax.fr>",

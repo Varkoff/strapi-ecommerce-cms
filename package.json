@@ -18,6 +18,7 @@
     "typescript": "^5"
   },
   "dependencies": {
+    "@strapi/email": "^5.0.0",
     "@strapi/plugin-cloud": "5.0.0",
     "@strapi/plugin-users-permissions": "5.0.0",
     "@strapi/provider-email-mailgun": "5.0.0",
