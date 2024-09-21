@@ -1,0 +1,17 @@
+services:
+  ecommerce_development:
+    environment:
+      - JWT_SECRET
+      - STRAPI_TOKEN
+      - STRAPI_URL
+
+    container_name: ecommerce_website_development
+    # image: algomax/ecommerce-frontend:development
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./image-cache:/app/image-cache

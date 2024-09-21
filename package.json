@@ -5,6 +5,7 @@
   "description": "A Strapi application",
   "scripts": {
     "dev": "strapi develop",
+    "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi",
@@ -24,6 +25,7 @@
     "@strapi/provider-email-mailgun": "5.0.0",
     "@strapi/strapi": "5.0.0",
     "better-sqlite3": "9.4.3",
+    "pg": "^8.13.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
