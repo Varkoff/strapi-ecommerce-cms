@@ -27,6 +27,8 @@ services:
       - STRAPI_URL
       - FRONTEND_URL
       - STRIPE_WEBHOOK_SECRET_KEY
+      - API_TOKEN_SALT
+      - TRANSFER_TOKEN_SALT
 
     volumes:
       - ./config:/opt/app/config

@@ -90,6 +90,8 @@ jobs:
           echo "STRIPE_PUBLISHABLE_KEY=${{ secrets.STRIPE_PUBLISHABLE_KEY }}" >> .env
           echo "FRONTEND_URL=${{ secrets.FRONTEND_URL }}" >> .env
           echo "STRIPE_WEBHOOK_SECRET_KEY=${{ secrets.STRIPE_WEBHOOK_SECRET_KEY }}" >> .env
+          echo "API_TOKEN_SALT=${{ secrets.API_TOKEN_SALT }}" >> .env
+          echo "TRANSFER_TOKEN_SALT=${{ secrets.TRANSFER_TOKEN_SALT }}" >> .env
 
           docker compose -f docker-compose.prod.yml up --build -d
           docker system prune --all --volumes --force
