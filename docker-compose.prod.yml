@@ -36,7 +36,7 @@ services:
       - ./.env:/opt/app/.env
       - ./public/uploads:/opt/app/public/uploads
     ports:
-      - "1337:1337"
+      - "3071:1337"
     networks:
       - strapi
     depends_on:
