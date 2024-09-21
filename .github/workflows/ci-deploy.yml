@@ -71,26 +71,25 @@ jobs:
         if: ${{ github.ref == 'refs/heads/main' }}
         run: |
           touch .env
-          echo "STRAPI_URL=${{ secrets.STRAPI_URL}}" >> .env
-          echo "DATABASE_CLIENT=${{ secrets.DATABASE_CLIENT}} >> .env
+          echo "STRAPI_URL=${{ secrets.STRAPI_URL }}" >> .env
+          echo "DATABASE_CLIENT=${{ secrets.DATABASE_CLIENT }}" >> .env
           echo "DATABASE_HOST=strapiDB" >> .env
-          echo "DATABASE_PORT=${{ secrets.DATABASE_PORT}} >> .env
-          echo "DATABASE_NAME=${{ secrets.DATABASE_NAME}} >> .env
-          echo "DATABASE_USERNAME=${{ secrets.DATABASE_USERNAME}} >> .env
-          echo "DATABASE_PASSWORD=${{ secrets.DATABASE_PASSWORD}} >> .env
-          echo "JWT_SECRET=${{ secrets.JWT_SECRET}} >> .env
-          echo "ADMIN_JWT_SECRET=${{ secrets.ADMIN_JWT_SECRET}} >> .env
-          echo "APP_KEYS=${{ secrets.APP_KEYS}} >> .env
-          echo "NODE_ENV=${{ secrets.NODE_ENV}} >> .env
-          echo "STRAPI_TOKEN=${{ secrets.STRAPI_TOKEN}} >> .env
-          echo "MAILGUN_API_KEY=${{ secrets.MAILGUN_API_KEY}} >> .env
-          echo "MAILGUN_DOMAIN=${{ secrets.MAILGUN_DOMAIN}} >> .env
-          echo "MAILGUN_URL=${{ secrets.MAILGUN_URL}} >> .env
-          echo "STRIPE_SECRET_KEY=${{ secrets.STRIPE_SECRET_KEY}} >> .env
-          echo "STRIPE_PUBLISHABLE_KEY=${{ secrets.STRIPE_PUBLISHABLE_KEY}} >> .env
-          echo "STRAPI_URL=${{ secrets.STRAPI_URL}} >> .env
-          echo "FRONTEND_URL=${{ secrets.FRONTEND_URL}} >> .env
-          echo "STRIPE_WEBHOOK_SECRET_KEY=${{ secrets.STRIPE_WEBHOOK_SECRET_KEY}} >> .env
+          echo "DATABASE_PORT=${{ secrets.DATABASE_PORT }}" >> .env
+          echo "DATABASE_NAME=${{ secrets.DATABASE_NAME }}" >> .env
+          echo "DATABASE_USERNAME=${{ secrets.DATABASE_USERNAME }}" >> .env
+          echo "DATABASE_PASSWORD=${{ secrets.DATABASE_PASSWORD }}" >> .env
+          echo "JWT_SECRET=${{ secrets.JWT_SECRET }}" >> .env
+          echo "ADMIN_JWT_SECRET=${{ secrets.ADMIN_JWT_SECRET }}" >> .env
+          echo "APP_KEYS=${{ secrets.APP_KEYS }}" >> .env
+          echo "NODE_ENV=${{ secrets.NODE_ENV }}" >> .env
+          echo "STRAPI_TOKEN=${{ secrets.STRAPI_TOKEN }}" >> .env
+          echo "MAILGUN_API_KEY=${{ secrets.MAILGUN_API_KEY }}" >> .env
+          echo "MAILGUN_DOMAIN=${{ secrets.MAILGUN_DOMAIN }}" >> .env
+          echo "MAILGUN_URL=${{ secrets.MAILGUN_URL }}" >> .env
+          echo "STRIPE_SECRET_KEY=${{ secrets.STRIPE_SECRET_KEY }}" >> .env
+          echo "STRIPE_PUBLISHABLE_KEY=${{ secrets.STRIPE_PUBLISHABLE_KEY }}" >> .env
+          echo "FRONTEND_URL=${{ secrets.FRONTEND_URL }}" >> .env
+          echo "STRIPE_WEBHOOK_SECRET_KEY=${{ secrets.STRIPE_WEBHOOK_SECRET_KEY }}" >> .env
 
           docker compose -f docker-compose.prod.yml up --build -d
           docker system prune --all --volumes --force
