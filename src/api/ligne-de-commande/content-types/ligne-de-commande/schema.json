@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ligne_de_commandes",
+  "info": {
+    "singularName": "ligne-de-commande",
+    "pluralName": "ligne-de-commandes",
+    "displayName": "Ligne de commande",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "produit": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::produit.produit"
+    },
+    "quantity": {
+      "type": "integer",
+      "default": 1,
+      "required": true
+    },
+    "price": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}

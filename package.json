@@ -4,27 +4,32 @@
   "version": "0.1.0",
   "description": "A Strapi application",
   "scripts": {
-    "develop": "strapi develop",
+    "dev": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi",
-    "deploy": "strapi deploy"
+    "deploy": "strapi deploy",
+    "generate": "strapi generate"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
-    "@types/react-dom": "^18"
+    "@types/react-dom": "^18",
+    "typescript": "^5"
   },
   "dependencies": {
-    "@strapi/strapi": "5.0.0-rc.9",
-    "@strapi/plugin-users-permissions": "5.0.0-rc.9",
-    "@strapi/plugin-cloud": "5.0.0-rc.9",
+    "@strapi/plugin-cloud": "5.0.0",
+    "@strapi/plugin-users-permissions": "5.0.0",
+    "@strapi/provider-email-mailgun": "5.0.0",
+    "@strapi/strapi": "5.0.0",
+    "better-sqlite3": "9.4.3",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
+    "socket.io": "^4.7.5",
+    "stripe": "^16.11.0",
     "styled-components": "^6.0.0",
-    "better-sqlite3": "9.4.3"
+    "zod": "^3.23.8"
   },
   "author": {
     "name": "A Strapi developer"

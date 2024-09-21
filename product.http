@@ -1,0 +1,9 @@
+PUT http://localhost:1337/api/users/1 HTTP/1.1
+Content-Type: application/json
+Authorization: bearer 86131120c2401cf0e477491a0768b11437c8e13e7bc1ad1781b0dba951c0cdd69bb6cf36b480d8f947536ab7bd528e81dfb99639572c96a9d72c12eeeea56afcf31b7441541d48aa5b6f25831796c61c603391de08c796c403f8373328c68ef9d9165754ce03b882d19a31ec1999b016a9bbbf59dac663b13a76639599689d81
+# Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI2NDg5NjQ3LCJleHAiOjE3MjkwODE2NDd9.lzHPjirpqqLJW35RvfSxbzYOUfHxDzttzGupYNCSRrQ
+
+
+{
+    "username": "Alfred"
+}
