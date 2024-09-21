@@ -1,7 +1,10 @@
 import type { Core } from "@strapi/strapi";
+import { createServer } from "node:http";
 import { Server } from "socket.io";
+const httpServer = createServer();
 
-export const io = new Server(strapi.server.httpServer, {
+export const io = new Server(httpServer, {
+  // export const io = new Server(strapi.server.httpServer, {
   cors: {
     origin: `${process.env.FRONTEND_URL}`,
     methods: ["GET", "POST"],
@@ -54,3 +57,5 @@ export default {
     // console.log('Websocket server running on port ' + strapi.server.httpServer)
   },
 };
+
+httpServer.listen(4000)
